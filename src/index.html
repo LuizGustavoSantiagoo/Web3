@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <link href="output.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  <link href="output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Login</title>
 </head>
+
 <body>
-  
+
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm pb-7">
       <img class="mx-auto h-10 w-auto" src="./img/logo.png" alt="Your Company">
     </div>
-    <section class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+    <section
+      class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
       <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
           Login
-      </h1>
-      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="#" method="POST">
-          <div>
-            <label for="email" class="block text-sm font-medium leading-6 text-white">Email</label>
-            <div class="mt-2">
-              <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-            </div>
-          </div>
-          <div>
-            <div class="flex items-center justify-between">
-              <label for="password" class="block text-sm font-medium leading-6 text-white">Senha</label>
-              <div class="text-sm">
-                <a href="#" class="font-semibold text-azul-100 hover:text-azul-200">Esqueci minha senha</a>
+        </h1>
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form class="space-y-6" method="POST" id="form">
+            <div>
+              <label for="email" class="block text-sm font-medium leading-6 text-white">Email</label>
+              <div class="mt-2">
+                <input id="email" name="email" type="email" autocomplete="email" required
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@company.com" required="">
               </div>
             </div>
-            <div class="mt-2">
-              <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <div>
+              <div class="flex items-center justify-between">
+                <label for="password" class="block text-sm font-medium leading-6 text-white">Senha</label>
+              </div>
+              <div class="mt-2">
+                <input id="password" name="password" type="password" autocomplete="current-password" required
+                  placeholder="••••••••"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  required="">
+              </div>
+              <div class="text-sm pt-1">
+                <a href="#" class="font-semibold text-azul-200 hover:text-dark">Esqueci minha senha</a>
+              </div>
             </div>
-          </div>
-          <div>
-            <button type="submit" class="flex w-full justify-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-dark shadow-sm hover:bg-azul-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Login</button>
-          </div>
-        </form>
-      </div>
+            <div>
+              <button type="submit" onclick="gatData()"
+                class="flex w-full justify-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-dark shadow-sm hover:bg-azul-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Login</button>
+            </div>
+            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+              Não tem uma conta? <a href="register.html"
+                class="font-medium text-primary-600 hover:underline dark:text-primary-500">Registre-se</a>
+            </p>
+          </form>
+        </div>
       </div>
     </section>
   </div>
-    
+  <script src="js/login.js"></script>
 </body>
+
 </html>

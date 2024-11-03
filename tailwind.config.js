@@ -11,7 +11,7 @@ module.exports = {
         'azul-200' : '#3a607a',
         'azul-300' : '#274052',
         'azul-400' : '#132029',
-        'dourado' : 'FFCC00',
+        'dourado' : '#FFCC00'
       }
     },
   },
